@@ -1,0 +1,43 @@
+#include <iostream>
+
+// const int NORTH = 0;
+// const int EAST = 1;
+// const int SOUTH = 2;
+// const int WEST = 3;
+enum dir{
+NORTH = 0,
+EAST = 1,
+SOUTH = 2,
+WEST = 3,
+};
+
+int calDir(int counter) {
+    int normalCounter = (counter % 4 + 4) % 4;
+    return normalCounter;
+}
+
+int main() {
+    int counter;
+    std::cin >> counter;
+    int currentDirectionIndex = calDir(counter);
+
+    const char* directionName = nullptr;
+    switch (currentDirectionIndex) {
+        case NORTH:
+            directionName = "North";
+            break;
+        case EAST:
+            directionName = "East";
+            break;
+        case SOUTH:
+            directionName = "South";
+            break;
+        case WEST:
+            directionName = "West";
+            break;
+    }
+
+    std::cout << "Current direction: " << directionName << std::endl;
+
+    return 0;
+}
