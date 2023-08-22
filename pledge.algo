@@ -1,0 +1,210 @@
+#include<iostream>
+using namespace std;
+void inxn(int l_dist,int r_dist,int s_dist);
+
+int main()
+{
+    int l_dist,r_dist,s_dist;
+    bool intxn = false;
+}
+// be right back
+void inxn(int l_dist,int r_dist,int s_dist, bool intxn)
+{
+    if(((l_dist > 10 || r_dist > 10) && (s_dist > 10)) || (l_dist > 10 && r_dist > 10) )
+    intxn == true;
+}
+
+void count()
+{
+
+}
+
+void pledge_algo(int x, int y, int pos)
+{
+    u_turn();
+    if(inxn()==true)
+    // u_turn();
+    //RSLU-->LSRU
+    // int pos = arr[x][y];
+    int posi;
+{   if(pos==1) // North
+        {
+             l_posi = arr[x-1][y];
+             r_posi = arr[x+1][y];
+             f_posi = arr[x][y-1];
+             b_posi = arr[x][y+1];
+        }
+    else if(pos==2) // East
+        {
+            l_posi = arr[x][y-1];
+            r_posi = arr[x][y+1];
+            f_posi = arr[x+1][y];
+            b_posi = arr[x-1][y];
+        }
+    else if (pos==3) // West
+        {
+            l_posi = arr[x][y+1];
+            r_posi = arr[x][y-1];
+            f_posi = arr[x-1][y];
+            b_posi = arr[x+1][y];
+        }
+    else if(pos==0) // South
+        {
+            l_posi = arr[x+1][y];
+            r_posi = arr[x-1][y];
+            f_posi = arr[x][y+1];
+            b_posi = arr[x][y-1];
+        }
+}
+
+
+if (pos==1)
+{
+  {
+    if ((distance_front<30 && distance_right<30 && (distance_left >30 || distance_left == false)) && (l_posi==0))
+  {
+    left();
+  }
+    else if ((distance_front>30 || distance_front == false) && (f_posi==0))
+  {
+    forward();
+  }
+  else if ((distance_front<30 && (distance_right>30 || distance_right == false) && distance_left <30)&& (r_posi==0))
+  {
+    right();
+  }
+  
+  else if (distance_front<30 && distance_right<30 && distance_left <30)
+  {
+    u_turn();
+  }  
+else
+  forward();
+}
+}
+else if(pos==2)
+{
+  {
+    if ((distance_front<30 && distance_right<30 && (distance_left >30 || distance_left == false)) && (l_posi==0))
+  {
+    left();
+  }
+    else if ((distance_front>30 || distance_front == false) && (f_posi==0))
+  {
+    forward();
+  }
+  else if ((distance_front<30 && (distance_right>30 || distance_right == false) && distance_left <30)&& (r_posi==0))
+  {
+    right();
+  }
+  
+else if (distance_front<30 && distance_right<30 && distance_left <30)
+  {
+    u_turn();
+  }  
+else
+  forward();
+}
+}
+
+else if(pos==3)
+{
+  {
+    if (((distance_front<30 && distance_right<30) && (distance_left >30 || distance_left == false)) && (l_pos==0))
+  {
+    left();
+  }
+    else if ((distance_front>30 || distance_front == false) && (f_pos==0))
+  {
+    forward();
+  }
+  else if ((distance_front<30 && (distance_right>30 || distance_right == false) && distance_left <30)&& (r_pos==0))
+  {
+    right();
+  }
+  
+  else if (distance_front<30 && distance_right<30 && distance_left <30)
+  {
+    u_turn();
+  } 
+  else
+  forward(); 
+}
+}
+else if(pos==4)
+{
+    if ((distance_front<30 && distance_right<30 && (distance_left >30 || distance_left == false)) && (l_pos==0))
+  {
+    left();
+  }
+    else if ((distance_front>30 || distance_front == false) && (f_pos==0))
+  {
+    forward();
+  }
+  else if ((distance_front<30 && (distance_right>30 || distance_right == false) && distance_left <30)&& (r_pos==0))
+  {
+    right();
+  }
+  
+else if (distance_front<30 && distance_right<30 && distance_left <30)
+  {
+    u_turn();
+  }  
+else
+  forward();
+}
+
+if(arr[x][y]==0)
+  exit;
+else
+  forward();
+
+}
+
+
+// direction hehe
+
+
+
+void forward()
+{
+  digitalWrite(motor_lA,1);
+  digitalWrite(motor_lB,0);
+  digitalWrite(motor_rA,0);
+  digitalWrite(motor_rB,1);
+  delay(1000);
+}
+
+
+void right(){
+  digitalWrite(motor_lA,1);
+  digitalWrite(motor_lB,0);
+  digitalWrite(motor_rA,0);
+  digitalWrite(motor_rB,1);
+ delay(100);
+}
+
+
+void left(){
+  digitalWrite(motor_lA,0);
+  digitalWrite(motor_lB,1);
+  digitalWrite(motor_rA,1);
+  digitalWrite(motor_rB,0);
+  delay(100);
+}
+
+
+void Stop(){
+  digitalWrite(motor_lA,0);
+  digitalWrite(motor_lB,0);
+  digitalWrite(motor_rA,0);
+  digitalWrite(motor_rB,0);
+  delay(300);
+}
+void u_turn(){
+  digitalWrite(motor_lA,1);
+  digitalWrite(motor_lB,0);
+  digitalWrite(motor_rA,0);
+  digitalWrite(motor_rB,1);
+  delay(200);
+}
