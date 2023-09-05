@@ -1,9 +1,5 @@
 #include <iostream>
 
-// const int NORTH = 0;
-// const int EAST = 1;
-// const int SOUTH = 2;
-// const int WEST = 3;
 enum dir{
 NORTH = 0,
 EAST = 1,
